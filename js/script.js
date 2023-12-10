@@ -1450,3 +1450,25 @@
 
 	} );
 }());
+
+
+function initMap() {
+	// Coordenadas do local que você deseja exibir no mapa
+	var myLatLng = {lat: -34.397, lng: 150.644};
+
+	// Opções do mapa
+	var mapOptions = {
+		center: myLatLng,
+		zoom: 8
+	};
+
+	// Crie o mapa e passe as opções e o elemento HTML onde o mapa será exibido
+	var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+	// Adicione um marcador ao mapa
+	var marker = new google.maps.Marker({
+		position: myLatLng,
+		map: map,
+		title: 'Hello World!'
+	});
+}
